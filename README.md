@@ -74,6 +74,12 @@ Full protocol docs in [ARCHITECTURE.md](ARCHITECTURE.md).
 
 ---
 
+## 📄 License
+
+MIT — free to use, modify and distribute.
+
+---
+
 ## ⚠️ Disclaimer
 
 This software sends raw HID commands directly to your mouse. Use at your own risk. The author is not responsible for any damage to your device.
