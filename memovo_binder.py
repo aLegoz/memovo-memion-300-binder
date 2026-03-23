@@ -15,7 +15,11 @@ from pynput import keyboard, mouse
 
 VENDOR_ID = 0x17ef
 PRODUCT_ID = 0x60e4
-CONFIG_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "memovo_config.json")
+if getattr(sys, 'frozen', False):
+    _BASE_DIR = os.path.dirname(sys.executable)
+else:
+    _BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+CONFIG_FILE = os.path.join(_BASE_DIR, "memovo_config.json")
 
 MOUSE_BUTTONS = [
     (0x00, "Button 1 (Left)"),
@@ -358,6 +362,11 @@ class App(tk.Tk):
         if self._first_launch:
             self._reset_defaults()
         self._refresh_status()
+        self.protocol("WM_DELETE_WINDOW", self._on_close)
+
+    def _on_close(self):
+        self._save_config()
+        self.destroy()
 
     def _build(self):
         hdr = tk.Frame(self, bg=BG, pady=14)
