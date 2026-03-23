@@ -1,5 +1,7 @@
 # Lenovo Legion M300 RGB — Button Remapper & Binder
 
+> 100% vibe coded. No cap.
+
 > Tired of the limited official Legion Software? This tool lets you bind **any key, mouse button, or media key** to any of the 8 buttons on the **Lenovo Legion M300 RGB Gaming Mouse** — no Legion Zone required.
 
 ---
@@ -77,6 +79,12 @@ See [ARCHITECTURE.md](ARCHITECTURE.md) for full protocol documentation.
 - Windows 10/11
 - Python 3.8+
 - `pip install hidapi pynput`
+
+---
+
+## Vibe coded
+
+This project was entirely vibe coded with AI assistance. Zero manual protocol documentation — HID packets were reverse engineered from Wireshark captures and the rest was vibes.
 
 ---
 
