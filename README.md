@@ -8,7 +8,7 @@
 
 ## Why this exists
 
-The official Lenovo Legion Software only allows basic remapping and lacks macro support for the M300 RGB. This app communicates directly with the mouse over HID, giving you full control over all 8 buttons.
+The official Lenovo Legion Software only allows basic remapping for the M300 RGB. This app communicates directly with the mouse over HID, giving you full control over all 8 buttons.
 
 ---
 
@@ -20,7 +20,7 @@ The official Lenovo Legion Software only allows basic remapping and lacks macro 
 - Media keys: volume up/down, mute, play/pause, next/previous track
 - DPI switch binding
 - Disable any button
-- Config saved automatically — persists across restarts
+- Config saved on Apply — persists across restarts
 - Default preset applied on first launch
 - No Legion Software, no drivers, no background services
 
@@ -96,4 +96,4 @@ This project was entirely vibe coded with AI assistance. Zero manual protocol do
 
 ## Related searches
 
-Lenovo Legion M300 RGB remap · Legion M300 RGB button binding · Legion M300 RGB alternative software · Lenovo gaming mouse macro · Legion mouse HID · M300 RGB keybind · Legion Zone alternative
+Lenovo Legion M300 RGB remap · Legion M300 RGB button binding · Legion M300 RGB alternative software · Legion mouse HID · M300 RGB keybind · Legion Zone alternative
