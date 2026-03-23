@@ -82,6 +82,12 @@ See [ARCHITECTURE.md](ARCHITECTURE.md) for full protocol documentation.
 
 ---
 
+## Disclaimer
+
+This software sends raw HID commands directly to your mouse. Use at your own risk. The author is not responsible for any damage to your device.
+
+---
+
 ## Vibe coded
 
 This project was entirely vibe coded with AI assistance. Zero manual protocol documentation — HID packets were reverse engineered from Wireshark captures and the rest was vibes.
