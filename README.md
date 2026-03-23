@@ -1,59 +1,51 @@
-# Lenovo Legion M300 RGB — Button Remapper & Binder
+# 🖱️ Lenovo Legion M300 RGB — Button Remapper
 
 > 100% vibe coded. No cap.
 
-> Tired of the limited official Legion Software? This tool lets you bind **any key, mouse button, or media key** to any of the 8 buttons on the **Lenovo Legion M300 RGB Gaming Mouse** — no Legion Zone required.
+Надоело что официальный софт от Lenovo почти ничего не умеет? Теперь можно запрограммировать **любую клавишу клавиатуры** прямо на мышку — на любую из 8 кнопок. Просто открываешь, выбираешь, нажимаешь Apply. Всё.
 
 ---
 
-## Why this exists
+## ✨ Что умеет
 
-The official Lenovo Legion Software only allows basic remapping for the M300 RGB. This app communicates directly with the mouse over HID, giving you full control over all 8 buttons.
-
----
-
-## Features
-
-- Remap all 8 mouse buttons freely
-- Bind keyboard keys (key is held as long as the button is pressed)
-- Mouse button remapping (left, right, middle, forward, backward)
-- Media keys: volume up/down, mute, play/pause, next/previous track
-- DPI switch binding
-- Disable any button
-- Config saved on Apply — persists across restarts
-- Default preset applied on first launch
-- No Legion Software, no drivers, no background services
+- 🎹 Любая клавиша клавиатуры на любую кнопку мыши
+- 🖱️ Переназначение кнопок мыши (левая, правая, средняя, вперёд, назад)
+- 🎵 Медиаклавиши: громкость, плей/пауза, следующий/предыдущий трек, мьют
+- ⚡ DPI Switch
+- 🚫 Отключить любую кнопку
+- 💾 Конфиг сохраняется при Apply — после перезапуска всё на месте
+- 🚀 Не нужен Legion Software, никаких драйверов и фоновых сервисов
 
 ---
 
-## Download
+## 📥 Скачать
 
-**[Download MemovoMemion300Binder.exe](../../releases/latest)** — no Python required, just run it.
-
----
-
-## Usage
-
-1. Plug in your Lenovo Legion M300 RGB via USB
-2. Run `MemovoMemion300Binder.exe`
-3. Select an action for each button from the dropdown
-4. For keyboard keys — choose "Keyboard Key..." and click the parameter field, then press the desired key
-5. Click **APPLY ALL**
+**[Скачать MemovoMemion300Binder.exe](../../releases/latest)** — Python не нужен, просто запускаешь.
 
 ---
 
-## Compatibility
+## 🚀 Как пользоваться
 
-| Device | Status |
+1. Подключи мышь по USB
+2. Запусти `MemovoMemion300Binder.exe`
+3. Выбери действие для каждой кнопки из списка
+4. Для клавиши клавиатуры — выбери "Keyboard Key...", кликни на поле справа и нажми нужную клавишу
+5. Нажми **APPLY ALL**
+
+---
+
+## 🔧 Совместимость
+
+| Устройство | Статус |
 |---|---|
-| Lenovo Legion M300 RGB (USB) | ✅ Tested |
-| Lenovo Legion M300s | ❓ Untested (same VID/PID likely) |
+| Lenovo Legion M300 RGB (USB) | ✅ Проверено |
+| Lenovo Legion M300s | ❓ Не проверено (вероятно работает) |
 
 **Vendor ID:** `0x17ef` · **Product ID:** `0x60e4`
 
 ---
 
-## Building from source
+## 🛠️ Сборка из исходников
 
 ```bash
 git clone https://github.com/aLegoz/memovo-memion-300-binder
@@ -62,19 +54,19 @@ pip install hidapi pynput pyinstaller
 pyinstaller --onefile --windowed --name "MemovoMemion300Binder" memovo_binder.py
 ```
 
-Output: `dist/MemovoMemion300Binder.exe`
+Результат: `dist/MemovoMemion300Binder.exe`
 
 ---
 
-## How it works
+## 🔬 Как это работает
 
-The HID protocol was reverse engineered by capturing USB traffic with **Wireshark + USBPcap** while the official Legion Software was running. All button binds are sent as 64-byte HID packets directly to the mouse's vendor-specific interface (`usage_page = 0xFF01`).
+HID-протокол был реверс-инжинирен через захват USB-трафика с помощью **Wireshark + USBPcap** во время работы официального Legion Software. Все команды отправляются напрямую на мышь в виде 64-байтных HID-пакетов.
 
-See [ARCHITECTURE.md](ARCHITECTURE.md) for full protocol documentation.
+Полная документация протокола — в [ARCHITECTURE.md](ARCHITECTURE.md).
 
 ---
 
-## Requirements (running from source)
+## ⚙️ Требования (запуск из исходников)
 
 - Windows 10/11
 - Python 3.8+
@@ -82,18 +74,18 @@ See [ARCHITECTURE.md](ARCHITECTURE.md) for full protocol documentation.
 
 ---
 
-## Disclaimer
+## ⚠️ Disclaimer
 
-This software sends raw HID commands directly to your mouse. Use at your own risk. The author is not responsible for any damage to your device.
-
----
-
-## Vibe coded
-
-This project was entirely vibe coded with AI assistance. Zero manual protocol documentation — HID packets were reverse engineered from Wireshark captures and the rest was vibes.
+Программа отправляет сырые HID-команды напрямую на мышь. Используй на свой страх и риск. Автор не несёт ответственности за любые повреждения устройства.
 
 ---
 
-## Related searches
+## 🤖 Vibe coded
+
+Весь проект сделан с помощью ИИ. Никакой ручной документации протокола — HID-пакеты реверс-инжинированы из Wireshark-дампов, остальное — вайбы.
+
+---
+
+## 🔍 Related searches
 
 Lenovo Legion M300 RGB remap · Legion M300 RGB button binding · Legion M300 RGB alternative software · Legion mouse HID · M300 RGB keybind · Legion Zone alternative
