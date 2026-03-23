@@ -46,7 +46,7 @@ ACTIONS = [
     ("--- Other ---",     None,       None),
     ("Disable",           "disable",  0x01),
     ("Keyboard Key...",   "keyboard", None),
-    ("Macro...",          "macro",    None),
+    # ("Macro...",        "macro",    None),  # Hidden until slot conflict bug is fixed
 ]
 
 TK_TO_HID = {
