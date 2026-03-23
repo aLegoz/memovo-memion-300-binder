@@ -88,4 +88,4 @@ Entirely built with AI assistance. Zero manual protocol documentation — HID pa
 
 ## 🔍 Related searches
 
-Lenovo Legion M300 RGB remap · Legion M300 RGB button binding · Legion M300 RGB alternative software · Legion mouse HID · M300 RGB keybind · Legion Zone alternative
+Lenovo Legion M300 RGB remap · Lenovo Legion M300 bind keyboard · Legion M300 RGB button binding · Legion M300 RGB keyboard bind · Legion M300 bind key · M300 RGB keybind · Legion M300 RGB alternative software · Legion M300 RGB custom software · Legion mouse HID · Legion Zone alternative · lenovo gaming mouse remap keys
