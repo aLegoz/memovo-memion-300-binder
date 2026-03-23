@@ -1,33 +1,85 @@
-# Memovo Memion 300 Binder
+# Lenovo Legion M300 RGB — Button Remapper & Binder
 
-A replacement for the limited Legion Software — bind any keyboard key, mouse button, media key, or macro to any of the 8 mouse buttons on the Memovo Memion 300 (Lenovo Legion M300 RGB).
+> Tired of the limited official Legion Software? This tool lets you bind **any key, mouse button, or media key** to any of the 8 buttons on the **Lenovo Legion M300 RGB Gaming Mouse** — no Legion Zone required.
+
+---
+
+## Why this exists
+
+The official Lenovo Legion Software only allows basic remapping and lacks macro support for the M300 RGB. This app communicates directly with the mouse over HID, giving you full control over all 8 buttons.
+
+---
 
 ## Features
-- Bind keyboard keys (held = key stays pressed)
-- Mouse button remapping
-- Media keys (volume, play/pause, etc.)
-- DPI switch
-- Macro recorder (keyboard + mouse clicks + scroll)
-- Config saved automatically
-- Default preset on first launch
 
-## Requirements
-- Windows
-- Python 3.8+
-- `pip install hidapi pynput`
+- Remap all 8 mouse buttons freely
+- Bind keyboard keys (key is held as long as the button is pressed)
+- Mouse button remapping (left, right, middle, forward, backward)
+- Media keys: volume up/down, mute, play/pause, next/previous track
+- DPI switch binding
+- Disable any button
+- Config saved automatically — persists across restarts
+- Default preset applied on first launch
+- No Legion Software, no drivers, no background services
+
+---
+
+## Download
+
+**[Download MemovoMemion300Binder.exe](../../releases/latest)** — no Python required, just run it.
+
+---
 
 ## Usage
-```
-python memovo_binder.py
-```
 
-Or download the `.exe` from [Releases](../../releases).
+1. Plug in your Lenovo Legion M300 RGB via USB
+2. Run `MemovoMemion300Binder.exe`
+3. Select an action for each button from the dropdown
+4. For keyboard keys — choose "Keyboard Key..." and click the parameter field, then press the desired key
+5. Click **APPLY ALL**
 
-## Building exe
-```
-pip install pyinstaller
+---
+
+## Compatibility
+
+| Device | Status |
+|---|---|
+| Lenovo Legion M300 RGB (USB) | ✅ Tested |
+| Lenovo Legion M300s | ❓ Untested (same VID/PID likely) |
+
+**Vendor ID:** `0x17ef` · **Product ID:** `0x60e4`
+
+---
+
+## Building from source
+
+```bash
+git clone https://github.com/aLegoz/memovo-memion-300-binder
+cd memovo-memion-300-binder
+pip install hidapi pynput pyinstaller
 pyinstaller --onefile --windowed --name "MemovoMemion300Binder" memovo_binder.py
 ```
 
+Output: `dist/MemovoMemion300Binder.exe`
+
+---
+
 ## How it works
-Reverse engineered HID protocol by capturing USB traffic with Wireshark + USBPcap while Legion Software was running. All commands are sent directly via hidapi.
+
+The HID protocol was reverse engineered by capturing USB traffic with **Wireshark + USBPcap** while the official Legion Software was running. All button binds are sent as 64-byte HID packets directly to the mouse's vendor-specific interface (`usage_page = 0xFF01`).
+
+See [ARCHITECTURE.md](ARCHITECTURE.md) for full protocol documentation.
+
+---
+
+## Requirements (running from source)
+
+- Windows 10/11
+- Python 3.8+
+- `pip install hidapi pynput`
+
+---
+
+## Related searches
+
+Lenovo Legion M300 RGB remap · Legion M300 RGB button binding · Legion M300 RGB alternative software · Lenovo gaming mouse macro · Legion mouse HID · M300 RGB keybind · Legion Zone alternative
