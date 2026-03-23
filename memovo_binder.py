@@ -362,11 +362,6 @@ class App(tk.Tk):
         if self._first_launch:
             self._reset_defaults()
         self._refresh_status()
-        self.protocol("WM_DELETE_WINDOW", self._on_close)
-
-    def _on_close(self):
-        self._save_config()
-        self.destroy()
 
     def _build(self):
         hdr = tk.Frame(self, bg=BG, pady=14)
