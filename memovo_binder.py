@@ -51,6 +51,19 @@ ACTIONS = [
     ("Disable",           "disable",  0x01),
     ("Keyboard Key...",   "keyboard", None),
     # ("Macro...",        "macro",    None),  # Hidden until slot conflict bug is fixed
+    ("--- Virtual Keys ---", None,    None),
+    ("F13 (virtual)",     "vkey",     0x68),
+    ("F14 (virtual)",     "vkey",     0x69),
+    ("F15 (virtual)",     "vkey",     0x6a),
+    ("F16 (virtual)",     "vkey",     0x6b),
+    ("F17 (virtual)",     "vkey",     0x6c),
+    ("F18 (virtual)",     "vkey",     0x6d),
+    ("F19 (virtual)",     "vkey",     0x6e),
+    ("F20 (virtual)",     "vkey",     0x6f),
+    ("F21 (virtual)",     "vkey",     0x70),
+    ("F22 (virtual)",     "vkey",     0x71),
+    ("F23 (virtual)",     "vkey",     0x72),
+    ("F24 (virtual)",     "vkey",     0x73),
 ]
 
 TK_TO_HID = {
@@ -516,7 +529,9 @@ class App(tk.Tk):
             action = self._current_action(btn_code)
             aname, atype, acode = action
             if atype is None: continue
-            if atype == "keyboard":
+            if atype == "vkey":
+                ok, msg = send_bind(btn_code, "keyboard", None, acode)
+            elif atype == "keyboard":
                 kc = self.btn_state[btn_code]["key_code"]
                 if not kc:
                     errors.append(f"{btn_name}: key not selected")
